@@ -703,8 +703,29 @@ function exportGraph(n) {
     sessionStorage.setItem("graph_type", tempGraph.type);
     sessionStorage.setItem("color", tempGraph.color);
 
+    // $.get( 
+    //     window.location.href,
+    //     {
+    //         get_session_id : 1
+    //     },
+    //     function(data) {
+    //         var session_id = data.session_id
+    //         console.log(session_id)
+    //         sessionStorage.setItem("sessionID", session_id)
+    //         if ("" == session_id){
+    //             // alert user
+    //             // give a friendly way to proceed without loss user's time
+    //             // return;
+    //         }
+    // // use session_id
+    // }, "json");
 
-    window.open("/dv4l/export.html", "_blank");
+    <script type="text/javascript">
+    var sessionid = "<?php echo session_id(); ?>";
+    </script>
+
+
+    window.open("export.html", "_blank");
 }
 
 function exportNotes(){
