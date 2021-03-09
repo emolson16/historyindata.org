@@ -704,6 +704,7 @@ function exportGraph(n) {
     sessionStorage.setItem("color", tempGraph.color);
 
     sessionStorage.setItem("sessionID", rstring);
+    sessionStorage.setItem("notesID", rstring);
 
 
     window.open("export.html", "_blank");
