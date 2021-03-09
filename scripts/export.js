@@ -13,6 +13,15 @@ $(document).ready( function() {
     var gtype = sessionStorage.getItem("graph_type");
     var color = sessionStorage.getItem("color");
 
+    var sessionID = sessionStorage.getItem("sessionID"); 
+
+    //console.log(document.getElementById("sessionID").value)
+    document.getElementById("sessionID").value = sessionID;
+    //console.log(document.getElementById("sessionID").value)
+
+    //console.log(sessionID)
+
+
     var ctx = document.getElementById("graphRegion");
     ctx = ctx.getContext("2d");
     var graph = new Chart(ctx, {
@@ -51,4 +60,5 @@ $(document).ready( function() {
             }
         }
     });
+
 });

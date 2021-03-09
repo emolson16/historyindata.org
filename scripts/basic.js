@@ -703,6 +703,8 @@ function exportGraph(n) {
     sessionStorage.setItem("graph_type", tempGraph.type);
     sessionStorage.setItem("color", tempGraph.color);
 
+    sessionStorage.setItem("sessionID", rstring);
+
 
     window.open("export.html", "_blank");
 }
