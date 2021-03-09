@@ -524,9 +524,6 @@ function changeColorTheme(element) {
         for (var y = 0; y < x.length; y++) {
             x[y].style.color = "white";
         }
-
-        document.getElementById("textinput").style.backgroundColor = "black";
-        document.getElementById("textinput2").style.backgroundColor = "black";
     }
     else {  //light theme chosen
         //change color for graph text
@@ -601,9 +598,6 @@ function changeColorTheme(element) {
         for (var y = 0; y < x.length; y++) {
             x[y].style.color = "black";
         }
-
-        document.getElementById("textinput").style.backgroundColor = "white";
-        document.getElementById("textinput2").style.backgroundColor = "white";
     }
 }
 
@@ -708,27 +702,6 @@ function exportGraph(n) {
     sessionStorage.setItem("maxDate", tempGraph.maxDate);
     sessionStorage.setItem("graph_type", tempGraph.type);
     sessionStorage.setItem("color", tempGraph.color);
-
-    // $.get( 
-    //     window.location.href,
-    //     {
-    //         get_session_id : 1
-    //     },
-    //     function(data) {
-    //         var session_id = data.session_id
-    //         console.log(session_id)
-    //         sessionStorage.setItem("sessionID", session_id)
-    //         if ("" == session_id){
-    //             // alert user
-    //             // give a friendly way to proceed without loss user's time
-    //             // return;
-    //         }
-    // // use session_id
-    // }, "json");
-
-    <script type="text/javascript">
-    var sessionid = "<?php echo session_id(); ?>";
-    </script>
 
 
     window.open("export.html", "_blank");
