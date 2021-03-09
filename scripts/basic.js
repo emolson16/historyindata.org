@@ -711,7 +711,7 @@ function exportNotes(){
     var txt = document.getElementById('notes').value;
     txt = txt.replace(/\r?\n/g, '<br />');
     sessionStorage.setItem("notesarea", txt);
-    window.open("/dv4l/notes.html", "_blank");
+    window.open("notes.html", "_blank");
 }
 
 function addNotes(element) {
