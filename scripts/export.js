@@ -17,7 +17,7 @@ $(document).ready( function() {
 
     //console.log(document.getElementById("sessionID").value)
     document.getElementById("sessionID").value = sessionID;
-    //console.log(document.getElementById("sessionID").value)
+    console.log(document.getElementById("sessionID").value)
 
     //console.log(sessionID)
 
