@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <!-- Stylesheet -->
+        <link rel="stylesheet" type="text/css" href="style/driving_question.css">
+        <!-- Include jQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    </head>
+    <body>
+        <div class="popup">
+            <form  class = "title">
+                <!-- <label for="driving-question">Driving Question</label> -->
+                <input type="text" class="dq-edit" value = "Driving Question" id="dq-edit-box" name="driving-question"><br><br>
+                <div class="edit" onclick="$('#dq-edit-box').focus()">Edit</div>
+            </form>
+            <!-- <h2 class="title">Driving question</h2> -->
+            
+            
+            Select one or more databases from the list
+            <div class = "outer-suggested-dbs"> 
+            <form class="suggested-dbs">
+                <label class="container">Database 1
+                    <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Database 2
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Database 3
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Database 4
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Database 5
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Database 6
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    </label>
+            </form>
+            </div>
+            <!-- <select multiple class="dropdown">
+                <option value="db1">Database 1</option>
+                <option value="db2">Database 2</option>
+                <option value="db3">Database 3</option>
+            </select>     -->
+                
+            <div class = "outer-buttons">
+                <div class = "button use-databases">Use these databases</div>
+            </div>
+        </div>
+    </body>
+</html>
