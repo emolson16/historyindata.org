@@ -150,7 +150,7 @@ var database_dict = {
     'Military Personnel Percent of Population',
     'Military Spending',
     'Military Spending Percent of GDP',
-  ],
+  ],+
   Economies: ['GDP', 'GDP Per Capita', 'Economic Freedom Scores'],
   Environment: [
     'CO2 Emissions',

@@ -706,8 +706,55 @@ function exportGraph(n) {
     sessionStorage.setItem("sessionID", rstring);
     sessionStorage.setItem("notesID", rstring);
 
+    var new_file_name = "export-" + rstring + ".html"
 
-    window.open("export.html", "_blank");
+    const fs = require('fs/promises');
+
+    function createFile(filename) {
+        fs.open(filename,'r',function(err, fd){
+          if (err) {
+            fs.writeFile(filename, '', function(err) {
+                if(err) {
+                    console.log(err);
+                }
+                console.log("The file was saved!");
+            });
+          } else {
+            console.log("The file exists!");
+          }
+        });
+      }
+    
+      createFile(new_file_name)
+        
+
+    //originalFile = "../export.html";
+
+    // console.log(originalFile.name)
+
+    // var newFile  = new Blob([originalFile], {type: originalFile.type});
+    // newFile.name = rstring+originalFile.name;
+    // newFile.lastModifiedDate = originalFile.lastModifiedDate;
+
+    // var doc = document.implementation.createHTMLDocument();
+    // doc.body.append('Hello World!');
+    // var iframeDoc = document.querySelector('iframe').contentDocument;
+    // iframeDoc.replaceChild(
+    // doc.documentElement,
+    // iframeDoc.documentElement
+    //concatenate session id to export.html to create different files
+
+    
+    // var export_file = new File(["/export.html"], new_file_name, { type: "/export.html".type }) 
+    // const fs = require('fs');
+
+    // // destination will be created or overwritten by default.
+    // fs.copyFile('/export.html', new_file_name , (err) => {
+    //     if (err) throw err;
+    //     console.log('File was copied to destination');
+    // });
+    // fs.writeFile(new_file_name, exportContent, (error) => { /* handle error */ });
+    window.open(new_file_name, "_blank");
 }
 
 function exportNotes(){
